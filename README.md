@@ -13,10 +13,10 @@ https://github.com/user-attachments/assets/ef60343e-2552-4285-bd5a-c48eaa21ed84
 - Simple and clean UI for editing and publishing posts.
 
 ## Tech Stack
-- **Backend**: Django, Django REST Framework
+- **Backend**: Django
 - **Database**: PostgreSQL
 - **Frontend**: Django Templates, HTML, CSS, JavaScript
-- **APIs Used**: YouTube Data API
+- **APIs Used**: YouTube Transcript API, Gemini API
 
 ## Installation
 
@@ -98,5 +98,5 @@ Contributions are welcome! To contribute:
 This project is licensed under the MIT License.
 
 ## Contact
-For any questions or suggestions, feel free to contact [your email or GitHub profile].
+For any questions or suggestions, feel free to contact [mhasan9080p@gmail.com].
 
