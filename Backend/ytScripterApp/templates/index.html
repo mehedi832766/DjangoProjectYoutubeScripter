@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,26 +54,40 @@
     <title>AI Youtube Script Generator</title>
 </head>
 
-<body class="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
+<body class="flex flex-col min-h-screen bg-cover bg-center bg-fixed backdrop-blur-sm bg-red-300/10 " style="background-image: url('{% static 'img/final.png' %}');">
     <!-- Nav Bar -->
-    <nav class="bg-slate-700 p-4 text-white flex justify-between">
-        <h1 class="text-4xl font-bold">Youtube Script Generator</h1>
-        <div><a href="#" class="hover:underline">Welcome {{user.username}} </a></div>
-        <div><a href="logout" class="hover:underline">Logout</a></div>
+    <nav class="sticky top-0 flex flex-row border-b-[0.5px] border-solid border-white justify-between p-2 bg-black-1150">   
+            <a href="/" class=" text-white hover:underline border-solid ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+              </a>
+            <div class="flex flex-row">
+            <a href="/blog-list" class="col-start-5 mr-4 hover:underline border-solid ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  
+    </a> 
+            <a href="/logout" class="text-white mr-4 hover:underline border-solid ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                  </svg>
+                  
+            </a>
+        </div>
+      
     </nav>
     <br>
     <br>
     <!-- Main Section -->
     <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
         <div
-            class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform  transform hover:scale-105 flex flex-col">
+            class="max-w-3xl mx-auto bg-gray-400 p-6 rounded-lg shadow-md transition-transform  transform hover:scale-105 flex flex-col">
             <!-- Introduction -->
             <div class="text-center">
-                <h2 class="text-2xl font-semibold mb-4">Welcome to AI blog Generator</h2>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eum dignissimos
-                    provident itaque vel
-                    neque quidem sit hic iste maiores? Quos est vitae dignissimos possimus ipsa officiis et? Expedita,
-                    porro.</p>
+                <h2 class="text-2xl font-semibold mb-4">Welcome {{user.username}} to AI blog Generator</h2>
+                <p class="text-gray-700"> Our tool extracts the essence of any YouTube video and provides a clean, organized script that matches the flow of the original content. Whether it’s for study, editing, or creating your own version, we’ve got you covered.</p>
 
             </div>
             <br>
@@ -80,12 +95,16 @@
             <!-- Youtube Section -->
 
             <div>
-                <h2 class="text-xl mb-4 font-semibold">Enter Youtube Link</h2>
+                
+                <h2 class=" text-xl mb-4 font-semibold">Enter Youtube Link</h2>
+               
+
                 <div class="flex space-x-4">
                     <input type="url" id="youtubeLink" placeholder="Paste Youtube Link..."
                         class="flex-grow p-2 border border-blue-400 rounded-l-md">
                     <button id="generateBlogButton"
                         class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors">Generate</button>
+                     
                 </div>
             </div>
             <!-- section for loading -->
@@ -104,7 +123,7 @@
         </div>
     </div>
 
-    <footer class="text-xl text-center p-4 mt-6">
+    <footer class="text-xl text-white text-center p-4 mt-6 ">
         Powered By Chetona
     </footer>
 
